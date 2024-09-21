@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const generateItems = () => {
-    return Array.from({ length: 10000 }, (_, index) => `Item ${index + 1}`);
+    return Array.from({ length: 10000 }, (_, index) => `Item:${index + 1}`);
 };
 
 const initialState = {
