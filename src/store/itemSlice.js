@@ -1,7 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const generateItems = () => {
+    return Array.from({ length: 10000 }, (_, index) => `Item ${index + 1}`);
+};
+
 const initialState = {
-    items: ["sarvesh", "sarang", "raj", "satish", "ganesh"],
+    items: generateItems(),
     searchTerm: '',
 };
 
