@@ -12,9 +12,11 @@ const ItemList = React.memo(() => {
 
     return (
         <ul className="space-y-2 mt-4">
-            {filteredItems.map((item, index) => (
-                <Item key={index} item={item} />
-            ))}
+            {filteredItems.length > 0 ? (
+                filteredItems.map((item, index) => <Item key={index} item={item} />)
+            ) : (
+                <p className="text-gray-500">No items found</p>
+            )}
         </ul>
     );
 });
